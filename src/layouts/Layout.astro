@@ -1,4 +1,5 @@
 ---
+// src/layouts/Layout.astro
 const { children } = Astro.props;
 ---
 
@@ -8,12 +9,13 @@ const { children } = Astro.props;
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Culture and Capital</title>
-  <link rel="stylesheet" href="/src/styles/global.css" /> <!-- Include this line -->
+  <!-- Tailwind CSS and global styles -->
+  <link rel="stylesheet" href="/styles/global.css" />
 </head>
-<body class="font-serif bg-white text-black">
+<body class="bg-white text-black">
 
-  <!-- Header (Navbar, etc.) -->
-  <header class="p-4 bg-gray-900 text-white">
+  <!-- Header -->
+  <header class="bg-black text-white p-4">
     <nav>
       <ul class="flex space-x-4">
         <li><a href="/" class="hover:underline">Home</a></li>
@@ -26,13 +28,13 @@ const { children } = Astro.props;
     </nav>
   </header>
 
-  <!-- Main content where the page-specific content will go -->
+  <!-- Main content area -->
   <main class="max-w-6xl mx-auto px-4 py-10">
     {children}
   </main>
 
   <!-- Footer -->
-  <footer class="p-4 bg-gray-900 text-white mt-10">
+  <footer class="bg-black text-white p-4 mt-10">
     <p>&copy; 2025 Culture and Capital. All rights reserved.</p>
   </footer>
 
