@@ -2,10 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout>
-  <section>
-    <h1>Welcome to the Culture and Capital Blog!</h1>
-    <p>This is your homepage content</p>
-    <!-- Add other content here -->
-  </section>
+
+<Layout title="Culture and Capital">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {[
+      { title: "Music", posts: 12, updated: "May 10, 2025" },
+      { title: "Film / TV", posts: 9, updated: "May 9, 2025" },
+      { title: "Fashion", posts: 7, updated: "May 8, 2025" },
+      { title: "Celebrities", posts: 15, updated: "May 11, 2025" },
+      { title: "Politics", posts: 6, updated: "May 7, 2025" },
+    ].map((section) => (
+      <section class="bg-white shadow-md rounded-xl p-6">
+        <h2 class="text-xl font-semibold mb-2">{section.title}</h2>
+        <p class="text-gray-600 text-sm">Articles: {section.posts}</p>
+        <p class="text-gray-500 text-sm">Updated: {section.updated}</p>
+      </section>
+    ))}
+  </div>
 </Layout>

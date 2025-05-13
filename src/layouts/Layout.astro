@@ -1,43 +1,26 @@
 ---
-// src/layouts/Layout.astro
-const { children } = Astro.props;
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+}
+
+const { title = "Culture and Capital" } = Astro.props as Props;
 ---
 
-<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Culture and Capital</title>
-  <!-- Tailwind CSS and global styles -->
-  <link rel="stylesheet" href="/styles/global.css" />
-</head>
-<body class="bg-white text-black">
-
-  <!-- Header -->
-  <header class="bg-black text-white p-4">
-    <nav>
-      <ul class="flex space-x-4">
-        <li><a href="/" class="hover:underline">Home</a></li>
-        <li><a href="/music" class="hover:underline">Music</a></li>
-        <li><a href="/film" class="hover:underline">Film</a></li>
-        <li><a href="/fashion" class="hover:underline">Fashion</a></li>
-        <li><a href="/celebrities" class="hover:underline">Celebrities</a></li>
-        <li><a href="/politics" class="hover:underline">Politics</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Main content area -->
-  <main class="max-w-6xl mx-auto px-4 py-10">
-    {children}
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-black text-white p-4 mt-10">
-    <p>&copy; 2025 Culture and Capital. All rights reserved.</p>
-  </footer>
-
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-50 text-gray-900 font-sans">
+    <header class="bg-black text-white p-4">
+      <h1 class="text-2xl font-bold">Culture and Capital</h1>
+    </header>
+    <main class="max-w-6xl mx-auto px-4 py-10">
+      <slot />
+    </main>
+    <footer class="bg-black text-white text-center py-4">
+      © 2025 Culture and Capital.
 
