@@ -1,22 +1,40 @@
+<!--This is my Homepage -->
 ---
 import Layout from '../layouts/Layout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
 ---
 
-
 <Layout title="Culture and Capital">
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {[
-      { title: "Music", posts: 12, updated: "May 10, 2025" },
-      { title: "Film / TV", posts: 9, updated: "May 9, 2025" },
-      { title: "Fashion", posts: 7, updated: "May 8, 2025" },
-      { title: "Celebrities", posts: 15, updated: "May 11, 2025" },
-      { title: "Politics", posts: 6, updated: "May 7, 2025" },
-    ].map((section) => (
-      <section class="bg-white shadow-md rounded-xl p-6">
-        <h2 class="text-xl font-semibold mb-2">{section.title}</h2>
-        <p class="text-gray-600 text-sm">Articles: {section.posts}</p>
-        <p class="text-gray-500 text-sm">Updated: {section.updated}</p>
-      </section>
-    ))}
-  </div>
+
+  <!-- Editor's Pick -->
+  <section class="mb-10">
+    <h1 class="text-4xl font-bold mb-4">Editor's Pick</h1>
+    <div class="relative bg-white rounded shadow overflow-hidden">
+      <!--Editor's Pick Image -->
+      <img src="/images/test_picture.jpg" alt="Editor's Pick" class="w-full h-96 object-cover" />
+      <div class="p-6">
+        <!--Editors Pick Title and Bio and Article Link -->
+        <h2 class="text-2xl font-bold mb-2">adVerse</h2>
+        <p class="mb-4">adVERSE magazine in development</p>
+        <a href="/editor-pick" class="text-blue-600 font-semibold">Read more →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5-Section Grid -->
+  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!--Sections Article Cards -->
+    <ArticleCard section="Music" title="Test" image="/images/test_picture.jpg" link="/music" />
+    <ArticleCard section="Film/TV" title="Test" image="/images/test_picture.jpg" link="/film-tv" />
+    <ArticleCard section="Fashion" title="Test" image="/images/test_picture.jpg" link="/fashion" />
+    <ArticleCard section="Celebrities" title="Test" image="/images/test_picture.jpg" link="/celebrities" />
+    <ArticleCard section="Politics" title="Test" image="/images/test_picture.jpg" link="/politics" />
+  </section>
 </Layout>
+
+
+<!--Commands -->
+<!--
+run site:npm run dev   
+
+-->

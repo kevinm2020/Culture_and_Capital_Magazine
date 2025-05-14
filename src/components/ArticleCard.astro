@@ -1,0 +1,20 @@
+<!-- This is a reusable block for article preview (title, image, link) -->
+
+---
+interface Props {
+  section: string;
+  title: string;
+  image: string;
+  link: string;
+}
+
+const { section, title, image, link } = Astro.props;
+---
+
+<div class="bg-white rounded shadow p-4">
+  <h2 class="text-lg font-bold mb-2">{section}</h2>
+  <a href={link}>
+    <img src={image} alt={title} class="rounded mb-2 w-full h-40 object-cover" />
+    <h3 class="text-md font-semibold">{title}</h3>
+  </a>
+</div>
