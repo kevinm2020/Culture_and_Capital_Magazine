@@ -8,14 +8,14 @@ import ArticleCard from '../components/ArticleCard.astro';
 
   <!-- Editor's Pick -->
   <section class="mb-10">
-    <h1 class="text-4xl font-bold mb-4">Editor's Pick</h1>
+    <h1 class="text-4xl font-bold mb-4">Editor's Pick Week of May 12-May 18th</h1>
     <div class="relative bg-white rounded shadow overflow-hidden">
       <!--Editor's Pick Image -->
       <img src="/images/test_picture.jpg" alt="Editor's Pick" class="w-full h-96 object-cover" />
       <div class="p-6">
         <!--Editors Pick Title and Bio and Article Link -->
-        <h2 class="text-2xl font-bold mb-2">adVerse</h2>
-        <p class="mb-4">adVERSE magazine in development</p>
+        <h2 class="text-2xl font-bold mb-2">Article Title</h2>
+        <p class="mb-4">Article Bio</p>
         <a href="/editor-pick" class="text-blue-600 font-semibold">Read more →</a>
       </div>
     </div>
@@ -24,11 +24,11 @@ import ArticleCard from '../components/ArticleCard.astro';
   <!-- 5-Section Grid -->
   <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     <!--Sections Article Cards -->
-    <ArticleCard section="Music" title="Test" image="/images/test_picture.jpg" link="/music" />
-    <ArticleCard section="Film/TV" title="Test" image="/images/test_picture.jpg" link="/film-tv" />
-    <ArticleCard section="Fashion" title="Test" image="/images/test_picture.jpg" link="/fashion" />
-    <ArticleCard section="Celebrities" title="Test" image="/images/test_picture.jpg" link="/celebrities" />
-    <ArticleCard section="Politics" title="Test" image="/images/test_picture.jpg" link="/politics" />
+    <ArticleCard section="Music" title="Test title" bio="test bio" image="/images/test_picture.jpg" link="/music" />
+    <ArticleCard section="Film/TV" title="Test title" bio="test bio" image="/images/test_picture.jpg" link="/film-tv" />
+    <ArticleCard section="Fashion" title="Test title" bio="test bio" image="/images/test_picture.jpg" link="/fashion" />
+    <ArticleCard section="Celebrities" title="Test title" bio="test bio" image="/images/test_picture.jpg" link="/celebrities" />
+    <ArticleCard section="Politics" title="Test title" bio="test bio" image="/images/test_picture.jpg" link="/politics" />
   </section>
 </Layout>
 
@@ -37,4 +37,8 @@ import ArticleCard from '../components/ArticleCard.astro';
 <!--
 run site:npm run dev   
 
+Github
+git add . 
+git commit -m "commit working_version 05-13"
+git push -u origin main  
 -->

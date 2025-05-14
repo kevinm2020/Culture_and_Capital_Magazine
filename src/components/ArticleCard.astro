@@ -1,20 +1,24 @@
 <!-- This is a reusable block for article preview (title, image, link) -->
-
 ---
 interface Props {
   section: string;
   title: string;
+  bio: string;
   image: string;
   link: string;
 }
 
-const { section, title, image, link } = Astro.props;
+const { section, title, bio, image, link } = Astro.props;
 ---
 
 <div class="bg-white rounded shadow p-4">
-  <h2 class="text-lg font-bold mb-2">{section}</h2>
-  <a href={link}>
-    <img src={image} alt={title} class="rounded mb-2 w-full h-40 object-cover" />
-    <h3 class="text-md font-semibold">{title}</h3>
+  <!-- Section link -->
+  <a href={link} class="text-sm text-blue-600 font-semibold hover:underline block mb-2">
+    {section}
   </a>
+
+  <!-- Main content (not a link anymore) -->
+  <img src={image} alt={title} class="rounded mb-2 w-full h-40 object-cover" />
+  <h3 class="text-md font-semibold mb-1">{title}</h3>
+  <p class="text-sm text-gray-700">{bio}</p>
 </div>

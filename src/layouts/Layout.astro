@@ -5,9 +5,8 @@ interface Props {
   title?: string;
 }
 
-const { title = "Culture and Capital" } = Astro.props as Props;
+const { title = "adVERSE MAGAZINE" } = Astro.props as Props;
 ---
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,11 +15,14 @@ const { title = "Culture and Capital" } = Astro.props as Props;
   </head>
   <body class="bg-gray-50 text-gray-900 font-sans">
     <header class="bg-black text-white p-4">
-      <h1 class="text-2xl font-bold">Culture and Capital</h1>
+      <h1 class="text-white text-4xl font-bold text-center">adVERSE MAGAZINE</h1>
     </header>
     <main class="max-w-6xl mx-auto px-4 py-10">
       <slot />
     </main>
     <footer class="bg-black text-white text-center py-4">
-      © 2025 Culture and Capital.
+      © 2025 adVERSE MAGAZINE.
+    </footer>
+  </body>
+</html>
 
