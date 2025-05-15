@@ -1,0 +1,21 @@
+---
+const { title, href, image, description, date } = Astro.props;
+image: "https://source.unsplash.com/600x400/?music"
+
+---
+
+<article class="w-full max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+  <a href={href}>
+    <img src={image} alt={title} class="w-full h-48 object-cover" />
+  </a>
+  <div class="p-4 border-t">
+    <h3 class="text-xl font-semibold mb-1">
+      <a href={href} class="text-blue-700 hover:underline">
+        {title}
+      </a>
+    </h3>
+    <p class="text-sm text-gray-600 mb-2">{description}</p>
+    <p class="text-xs text-gray-400">{date}</p>
+  </div>
+</article>
+

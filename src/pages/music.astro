@@ -1,0 +1,53 @@
+---
+import SectionArticleCard from '../components/sectionArticleCard.astro';
+
+const articles = [
+  {
+    title: "On Album of 2025",
+    href: "/src/content/blog/articles/music-articles/top-albums-2025.md",
+    image: "/images/test_picture.jpg",
+    description: "Test.",
+    date: "May 15, 2025"
+  },
+  {
+    title: "B",
+    href: "/articles/celebrity-culture",
+    image: "/images/test_picture.jpg",
+    description: "Test.",
+    date: "May 14, 2025"
+  }
+];
+---
+
+<!-- Page Wrapper -->
+<div class="px-4 py-8 max-w-7xl mx-auto">
+
+  <!-- Section Header -->
+  <header class="mb-8">
+    <h1 class="text-4xl font-bold text-center text-gray-900">Music</h1>
+  </header>
+
+  <!-- Article Cards -->
+  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {articles.map(article => (
+    <>
+      <SectionArticleCard 
+        title={article.title}
+        href={article.href}
+        image={article.image}
+        description={article.description}
+        date={article.date}
+      />
+    </>
+  ))}
+</section>
+
+
+  <!-- Back to Homepage Link -->
+  <footer class="mt-12 text-center">
+    <a href="/" class="text-blue-600 hover:underline text-sm">← Back to Homepage</a>
+  </footer>
+
+</div>
+
+

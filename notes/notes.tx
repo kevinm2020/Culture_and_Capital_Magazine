@@ -96,3 +96,53 @@ import ArticleCard from '../components/ArticleCard.astro';
     <ArticleCard section="Politics" title="Test" bio="test bio" image="/images/test_picture.jpg" link="/politics" />
   </section>
 </Layout>
+
+okay next task for my subVERSE MAGAZINE
+
+i want to create  a new component: section_articleCard
+
+the section_articleCard is a rectangle wide box, top half contains the image realted to the article
+the second half is narrow and it contains, Article Title, Article small bio, and date of article
+the Article Title is also a link to direct to the article itself.
+
+
+Okay here is my music.astro code (the music article base).
+<!--imports, uses section Article Card -->
+
+
+<!-- change articles to display const articles [articleCard] -->
+---
+import SectionArticleCard from '../components/sectionArticleCard.astro';
+
+const articles = [
+  {
+    title: "The Revival of Indie Magazines",
+    href: "/articles/indie-magazines",
+    image: "/images/test_picture.jpg",
+    description: "Why niche publications like subVERSE are redefining culture commentary.",
+    date: "May 14, 2025"
+  },
+  {
+    title: "Celebrity Culture in 2025",
+    href: "/articles/celebrity-culture",
+    image: "/images/test_picture.jpg",
+    description: "A deep dive into the obsession with fame.",
+    date: "May 14, 2025"
+  }
+];
+---
+
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {articles.map(article => (
+    <SectionArticleCard 
+      title={article.title}
+      href={article.href}
+      image={article.image}
+      description={article.description}
+      date={article.date}
+    />
+  ))}
+</section>
+Here i want to show the section_articleCard.
+and i also want to display a header title = Music
+and on the bottom header a link to go back to homepage
