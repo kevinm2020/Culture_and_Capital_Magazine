@@ -1,0 +1,46 @@
+---
+import { getEntry, getCollection } from 'astro:content';
+import type { APIContext } from 'astro';
+
+// Type generation for the collection
+import type { CollectionEntry } from 'astro:content';
+type MusicArticle = CollectionEntry<'music-articles'>;
+
+// Get all static paths for music articles
+export async function getStaticPaths() {
+  const articles = await getCollection('music-articles');
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+
+// Get the entry by slug
+const article = await getEntry('music-articles', slug);
+
+if (!article) {
+  throw new Error(`Article not found: ${slug}`);
+}
+
+// article.data is valid here
+const { Content } = await article.render();
+const data = article.data;
+---
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{data.title}</title>
+  </head>
+  <body>
+    <article style="max-width: 700px; margin: auto; font-family: sans-serif;">
+      <h1>{data.title}</h1>
+      <p><em>{data.pubDate.toLocaleDateString()} — {data.author}</em></p>
+      <Content />
+    </article>
+  </body>
+</html>
+
+
+

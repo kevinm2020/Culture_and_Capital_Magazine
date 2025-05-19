@@ -1,12 +1,11 @@
-
 ---
-title: "Top Albums of 2025 (January – May 15)"
+title: "Top Albums of 2025 so Far"
 description: "An irreverent breakdown of 2025’s best music so far — from FKA Twigs, Lady Gaga, to Pink Pantheress."
 pubDate: 2025-05-15
 author: "K.M"
+tags: ["music", "albums", "2025"]
 ---
-
-# Top Albums of 2025 (January – May 15)
+# Top Albums of 2025 (January May 15)
 *By: K.M | May 15, 2025*
 
 2024 was one of the biggest years in music. This time last year, we were swimming in highly anticipated drops — *Cowboy Carter*, *Hit Me Hard and Soft*, *Eternal Sunshine*, *Short n' Sweet*, *Charm*, *Brat*. If 2024 was the raging, euphoric house party, 2025 is the hangover: dry-mouthed and broke.
@@ -107,4 +106,4 @@ It’s Pink at her most *British*. Cohesive. Club-ready. Genius.
 Will it top the chaos of 2024? Probably not.  
 Will we try anyway? Absolutely.
 
-Stay tuned with **Adverse** — we’ll keep you locked into the sound of the culture.
+Stay tuned with **adVERSE** — we’ll keep you locked into the sound of the culture.
